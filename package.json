@@ -9,6 +9,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "next": "canary",
+    "next-static-utils": "^1.0.4",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
     "typescript": "^5.4.5"
