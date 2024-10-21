@@ -1,8 +1,14 @@
-export async function generateStaticParams() {
-  let photos = Array.from({ length: 6 }, (_, i) => i + 1);
-  return photos.map((id) => ({ id: String(id) }));
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  let slugs = ["1", "2", "3", "4", "5", "6"];
+  return slugs.map((slug) => ({ id: slug }));
 }
 
-export default function PhotoPage({ params: { id } }: { params: { id: string } }) {
+export default async function PhotoPage(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
+
+  const { id } = params;
+
   return <div className="card">{id}</div>;
 }
