@@ -16,5 +16,9 @@ export default async function PhotoModal(
     id: photoId
   } = params;
 
-  return <Modal>{photoId}</Modal>;
+  return (
+    <Modal>
+      <div className="card">{photoId}</div>
+    </Modal>
+  );
 }
